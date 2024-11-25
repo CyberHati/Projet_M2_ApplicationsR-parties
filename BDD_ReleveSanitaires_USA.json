@@ -1,0 +1,92 @@
+[
+  {
+    "Zone": 101,
+    "Identifiant du relevé": 1,
+    "Température air": 22.5,
+    "Taux d'humidité": 65,
+    "Pression air": 1.02,
+    "Oxyde de carbone": 0.03,
+    "Particules (PM10 et PM2.5)": 0.02
+  },
+  {
+    "Zone": 102,
+    "Identifiant du relevé": 2,
+    "Température air": 20.0,
+    "Taux d'humidité": 70,
+    "Pression air": 1.01,
+    "Oxyde de carbone": 0.02,
+    "Particules (PM10 et PM2.5)": 0.05
+  },
+  {
+    "Zone": 103,
+    "Identifiant du relevé": 3,
+    "Température air": 21.3,
+    "Taux d'humidité": 60,
+    "Pression air": 1.03,
+    "Oxyde de carbone": 0.04,
+    "Particules (PM10 et PM2.5)": 0.03
+  },
+  {
+    "Zone": 104,
+    "Identifiant du relevé": 4,
+    "Température air": 23.1,
+    "Taux d'humidité": 68,
+    "Pression air": 1.02,
+    "Oxyde de carbone": 0.05,
+    "Particules (PM10 et PM2.5)": 0.04
+  },
+  {
+    "Zone": 105,
+    "Identifiant du relevé": 5,
+    "Température air": 19.8,
+    "Taux d'humidité": 72,
+    "Pression air": 1.00,
+    "Oxyde de carbone": 0.03,
+    "Particules (PM10 et PM2.5)": 0.02
+  },
+  {
+    "Zone": 106,
+    "Identifiant du relevé": 6,
+    "Température air": 24.0,
+    "Taux d'humidité": 63,
+    "Pression air": 1.04,
+    "Oxyde de carbone": 0.02,
+    "Particules (PM10 et PM2.5)": 0.01
+  },
+  {
+    "Zone": 107,
+    "Identifiant du relevé": 7,
+    "Température air": 22.7,
+    "Taux d'humidité": 69,
+    "Pression air": 1.02,
+    "Oxyde de carbone": 0.04,
+    "Particules (PM10 et PM2.5)": 0.03
+  },
+  {
+    "Zone": 108,
+    "Identifiant du relevé": 8,
+    "Température air": 21.5,
+    "Taux d'humidité": 66,
+    "Pression air": 1.01,
+    "Oxyde de carbone": 0.03,
+    "Particules (PM10 et PM2.5)": 0.02
+  },
+  {
+    "Zone": 109,
+    "Identifiant du relevé": 9,
+    "Température air": 20.5,
+    "Taux d'humidité": 75,
+    "Pression air": 1.03,
+    "Oxyde de carbone": 0.06,
+    "Particules (PM10 et PM2.5)": 0.04
+  },
+  {
+    "Zone": 110,
+    "Identifiant du relevé": 10,
+    "Température air": 23.8,
+    "Taux d'humidité": 64,
+    "Pression air": 1.01,
+    "Oxyde de carbone": 0.03,
+    "Particules (PM10 et PM2.5)": 0.02
+  }
+]
