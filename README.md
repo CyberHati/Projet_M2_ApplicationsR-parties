@@ -100,24 +100,23 @@ La liste suivante indique le type de données que fournira ce serveur applicatif
 ### **Niveau Client**
 Nous allons devoir réaliser un tableau de bord pour l'utilisateur "Olivia" qui aura accès à :
 
-
 #### Commercial
-- **A.** Article ayant subi le moins de collisions
+**A.** Article ayant subi le moins de collisions
 
 #### Industriel
-- **B.** Machine ayant la meilleure cadence
+**B.** Machine ayant la meilleure cadence
 
 #### Qualité
-- **A.** Nombre d’articles ayant un emballage correct
+**A.** Nombre d’articles ayant un emballage correct
 
 #### Recherche & développement
-- **A.** Nombre d’articles ayant un emballage déformé sans subir aucune collision
+**A.** Nombre d’articles ayant un emballage déformé sans subir aucune collision
 
 #### Ressources humaines
-- **A.** Formation en ressources humaines ayant le pourcentage de motivation le plus élevé
+**A.** Formation en ressources humaines ayant le pourcentage de motivation le plus élevé
 
 #### Maintenance
-- **B.** Nombre de zones ayant un incendie en cours
+**B.** Nombre de zones ayant un incendie en cours
 
 #### Assistance commerciale
-- **B.** Nombre de responsables en vente
+**B.** Nombre de responsables en vente
