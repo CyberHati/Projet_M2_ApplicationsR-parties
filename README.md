@@ -1,6 +1,6 @@
 # **_Projet_M2_ApplicationsReparties_**
 ## **Contexte**
-### **Niveau serveur**
+### **Serveurs de données**
 Nous devons créer un serveur de données permettant d'accéder aux données suivantes :
 #### Personnel
 - **Identifiant :** Numéro de sécurité sociale
@@ -66,4 +66,58 @@ Nous devons créer un serveur de données permettant d'accéder aux données sui
   - personnel non identifiée
   - objet non identifié
 - **Audit de conformité :** oui / non
+
+### **Serveurs applicatifs**
+L’ensemble des données des différents sites n’est pas centralisé
+sur un seul serveur.
+En effet, les accès à ces données sont répartis sur différents
+serveurs applicatifs. De plus, un seul serveur applicatif est
+présent dans chaque service.
+La liste des serveurs applicatifs ci-dessous indique le type de données qui alimente ce serveur applicatif :
+#### Commercial
+  - Opérations commerciales
+  - Articles
+#### Assistance Commerciale
+  - Opérations commerciales
+  - Relevés sanitaires
+#### Recherche et développement
+  - Articles
+  - Machines
+
+
+La liste suivante indique le type de données que fournira ce serveur applicatif:
+#### Assistance commerciale
+- **A.** Zone ayant le taux d’oxyde de carbone le plus faible
+- **B.** Nombre de responsables en vente
+
+#### Commercial
+- **A.** Article ayant subi le moins de collisions
+- **B.** Responsable de l’opération ayant eu la marge la plus importante
+
+#### Recherche & développement
+- **A.** Nombre d’articles ayant un emballage déformé sans subir aucune collision
+- **B.** Machine ayant la plus faible cadence
 ### **Niveau Client**
+Nous allons devoir réaliser un tableau de bord pour l'utilisateur "Olivia" qui aura accès à :
+
+
+#### Commercial
+- **A.** Article ayant subi le moins de collisions
+
+#### Industriel
+- **B.** Machine ayant la meilleure cadence
+
+#### Qualité
+- **A.** Nombre d’articles ayant un emballage correct
+
+#### Recherche & développement
+- **A.** Nombre d’articles ayant un emballage déformé sans subir aucune collision
+
+#### Ressources humaines
+- **A.** Formation en ressources humaines ayant le pourcentage de motivation le plus élevé
+
+#### Maintenance
+- **B.** Nombre de zones ayant un incendie en cours
+
+#### Assistance commerciale
+- **B.** Nombre de responsables en vente
