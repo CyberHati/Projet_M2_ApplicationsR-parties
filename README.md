@@ -120,3 +120,11 @@ Nous allons devoir réaliser un tableau de bord pour l'utilisateur "Olivia" qui 
 
 #### Assistance commerciale
 **B.** Nombre de responsables en vente
+
+# **Partie Code**
+Les données sont stockées dans des fichiers .json se trouvant dans le dossier "/donnees"
+
+Pour lancer le serveur il faut lancer cette commande depuis le dossier mère :
+`uvicorn main:app --reload`
+
+
