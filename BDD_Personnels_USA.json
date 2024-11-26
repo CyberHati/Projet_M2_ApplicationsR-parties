@@ -1,10 +1,10 @@
 [
   {
     "Identifiant": "123-45-6789",
-    "NomPrenom": "John Doe",
+    "Nom-Prénom": "John Doe",
     "Etat": "Actif",
     "Service": "Informatique",
-    "FrequenceCardiaqueActuelle": 72,
+    "Fréquence cardiaque actuelle": 72,
     "Position": {
       "Latitude": 40.712776,
       "Longitude": -74.005974
@@ -12,10 +12,10 @@
   },
   {
     "Identifiant": "987-65-4321",
-    "NomPrenom": "Jane Smith",
+    "Nom-Prénom": "Jane Smith",
     "Etat": "Repos",
     "Service": "Marketing",
-    "FrequenceCardiaqueActuelle": 68,
+    "Fréquence cardiaque actuelle": 68,
     "Position": {
       "Latitude": 34.052235,
       "Longitude": -118.243683
@@ -23,10 +23,10 @@
   },
   {
     "Identifiant": "111-22-3333",
-    "NomPrenom": "Michael Lee",
+    "Nom-Prénom": "Michael Lee",
     "Etat": "Congé",
     "Service": "Cybersécurité",
-    "FrequenceCardiaqueActuelle": 80,
+    "Fréquence cardiaque actuelle": 80,
     "Position": {
       "Latitude": 51.507351,
       "Longitude": -0.127758
@@ -34,10 +34,10 @@
   },
   {
     "Identifiant": "222-33-4444",
-    "NomPrenom": "Emily Clark",
-    "Etat": "ArretMaladie",
-    "Service": "RessourcesHumaines",
-    "FrequenceCardiaqueActuelle": 90,
+    "Nom-Prénom": "Emily Clark",
+    "Etat": "Arrêt Maladie",
+    "Service": "Ressources humaines",
+    "Fréquence cardiaque actuelle": 90,
     "Position": {
       "Latitude": 48.856613,
       "Longitude": 2.352222
@@ -45,10 +45,10 @@
   },
   {
     "Identifiant": "333-44-5555",
-    "NomPrenom": "David Kim",
+    "Nom-Prénom": "David Kim",
     "Etat": "Actif",
-    "Service": "DirectionGenerale",
-    "FrequenceCardiaqueActuelle": 78,
+    "Service": "Direction Générale",
+    "Fréquence cardiaque actuelle": 78,
     "Position": {
       "Latitude": 52.3676,
       "Longitude": 4.9041
@@ -56,10 +56,10 @@
   },
   {
     "Identifiant": "444-55-6666",
-    "NomPrenom": "Olivia Brown",
+    "Nom-Prénom": "Olivia Brown",
     "Etat": "Congé",
-    "Service": "RechercheDeveloppement",
-    "FrequenceCardiaqueActuelle": 85,
+    "Service": "Recherche et Développement",
+    "Fréquence cardiaque actuelle": 85,
     "Position": {
       "Latitude": 40.730610,
       "Longitude": -73.935242
@@ -67,10 +67,10 @@
   },
   {
     "Identifiant": "555-66-7777",
-    "NomPrenom": "James White",
+    "Nom-Prénom": "James White",
     "Etat": "Actif",
     "Service": "Commercial",
-    "FrequenceCardiaqueActuelle": 75,
+    "Fréquence cardiaque actuelle": 75,
     "Position": {
       "Latitude": 37.774929,
       "Longitude": -122.419418
@@ -78,10 +78,10 @@
   },
   {
     "Identifiant": "666-77-8888",
-    "NomPrenom": "Sophia Green",
+    "Nom-Prénom": "Sophia Green",
     "Etat": "Repos",
-    "Service": "FinanceGestion",
-    "FrequenceCardiaqueActuelle": 82,
+    "Service": "Finance et gestion",
+    "Fréquence cardiaque actuelle": 82,
     "Position": {
       "Latitude": 34.052235,
       "Longitude": -118.243683
@@ -89,10 +89,10 @@
   },
   {
     "Identifiant": "777-88-9999",
-    "NomPrenom": "William Black",
-    "Etat": "ArretMaladie",
+    "Nom-Prénom": "William Black",
+    "Etat": "Arrêt Maladie",
     "Service": "Logistique",
-    "FrequenceCardiaqueActuelle": 77,
+    "Fréquence cardiaque actuelle": 77,
     "Position": {
       "Latitude": 51.507351,
       "Longitude": -0.127758
@@ -100,13 +100,14 @@
   },
   {
     "Identifiant": "888-99-0000",
-    "NomPrenom": "Lucas Blue",
+    "Nom-Prénom": "Lucas Blue",
     "Etat": "Actif",
-    "Service": "AssistanceTechnique",
-    "FrequenceCardiaqueActuelle": 70,
+    "Service": "Assistance technique",
+    "Fréquence cardiaque actuelle": 70,
     "Position": {
       "Latitude": 48.856613,
       "Longitude": 2.352222
     }
   }
 ]
+
