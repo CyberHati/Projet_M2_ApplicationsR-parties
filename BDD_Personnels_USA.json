@@ -1,0 +1,112 @@
+[
+  {
+    "Identifiant": "123-45-6789",
+    "NomPrenom": "John Doe",
+    "Etat": "Actif",
+    "Service": "Informatique",
+    "FrequenceCardiaqueActuelle": 72,
+    "Position": {
+      "Latitude": 40.712776,
+      "Longitude": -74.005974
+    }
+  },
+  {
+    "Identifiant": "987-65-4321",
+    "NomPrenom": "Jane Smith",
+    "Etat": "Repos",
+    "Service": "Marketing",
+    "FrequenceCardiaqueActuelle": 68,
+    "Position": {
+      "Latitude": 34.052235,
+      "Longitude": -118.243683
+    }
+  },
+  {
+    "Identifiant": "111-22-3333",
+    "NomPrenom": "Michael Lee",
+    "Etat": "Congé",
+    "Service": "Cybersécurité",
+    "FrequenceCardiaqueActuelle": 80,
+    "Position": {
+      "Latitude": 51.507351,
+      "Longitude": -0.127758
+    }
+  },
+  {
+    "Identifiant": "222-33-4444",
+    "NomPrenom": "Emily Clark",
+    "Etat": "ArretMaladie",
+    "Service": "RessourcesHumaines",
+    "FrequenceCardiaqueActuelle": 90,
+    "Position": {
+      "Latitude": 48.856613,
+      "Longitude": 2.352222
+    }
+  },
+  {
+    "Identifiant": "333-44-5555",
+    "NomPrenom": "David Kim",
+    "Etat": "Actif",
+    "Service": "DirectionGenerale",
+    "FrequenceCardiaqueActuelle": 78,
+    "Position": {
+      "Latitude": 52.3676,
+      "Longitude": 4.9041
+    }
+  },
+  {
+    "Identifiant": "444-55-6666",
+    "NomPrenom": "Olivia Brown",
+    "Etat": "Congé",
+    "Service": "RechercheDeveloppement",
+    "FrequenceCardiaqueActuelle": 85,
+    "Position": {
+      "Latitude": 40.730610,
+      "Longitude": -73.935242
+    }
+  },
+  {
+    "Identifiant": "555-66-7777",
+    "NomPrenom": "James White",
+    "Etat": "Actif",
+    "Service": "Commercial",
+    "FrequenceCardiaqueActuelle": 75,
+    "Position": {
+      "Latitude": 37.774929,
+      "Longitude": -122.419418
+    }
+  },
+  {
+    "Identifiant": "666-77-8888",
+    "NomPrenom": "Sophia Green",
+    "Etat": "Repos",
+    "Service": "FinanceGestion",
+    "FrequenceCardiaqueActuelle": 82,
+    "Position": {
+      "Latitude": 34.052235,
+      "Longitude": -118.243683
+    }
+  },
+  {
+    "Identifiant": "777-88-9999",
+    "NomPrenom": "William Black",
+    "Etat": "ArretMaladie",
+    "Service": "Logistique",
+    "FrequenceCardiaqueActuelle": 77,
+    "Position": {
+      "Latitude": 51.507351,
+      "Longitude": -0.127758
+    }
+  },
+  {
+    "Identifiant": "888-99-0000",
+    "NomPrenom": "Lucas Blue",
+    "Etat": "Actif",
+    "Service": "AssistanceTechnique",
+    "FrequenceCardiaqueActuelle": 70,
+    "Position": {
+      "Latitude": 48.856613,
+      "Longitude": 2.352222
+    }
+  }
+]
