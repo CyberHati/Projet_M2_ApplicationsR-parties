@@ -5,13 +5,27 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<link rel="stylesheet" type="text/css" href="../CSS/Beaute.css">
+		<!--<link rel="stylesheet" type="text/css" href="../CSS/Beaute.css">-->
 		
 		<title> Tableau de Bord </title>
 
 	</head>
 	
 	<body>
+	
+	<script src="d3.v7.js"></script>
+	
+	<script>
+	
+			var data = [
+				30,
+				25,
+				64,
+				189,
+				2,
+			];
+			
+	</script>
 	
 	<header>
 	
@@ -20,12 +34,83 @@
 	</header>
 
 	<main>
+	
+		<script>
 		
-		<div>
+			var width = 500,
+				scaleFactor = 10,
+				barHeight = 20;
+				
+			var graph = d3.select("body")
+              .append("svg")
+              .attr("width", width)
+              .attr("height", barHeight * data.length);
+			  
+			var bar = graph.selectAll("g")
+				.data(data)
+				.enter().append("g")
+				.attr("transform", function(d, i) {
+					return "translate(0," + i*barHeight + ")";
+				});
+				
+			bar.append("rect")
+				.attr("width", function(d) {
+					return d * scaleFactor;
+				})
+				.attr("height", barHeight - 1);
+				
+			bar.append("text")
+			   .attr("x", function(d) { return (d*scaleFactor); })
+			   .attr("y", barHeight / 2)
+			   .attr("dy", ".35em")
+			   .text(function(d) { return d; });
+		
+		</script>
+		
+		<div style="width: 200px; height: 100px; background-color: steelblue; margin: 20px;">
 			formulaire 
 		</div>
 		
 		<p> Ce paragraphe est généré par du code HTML et peut être utilisé pour afficher des informations quelconques. Vous pouvez ajouter plus de texte, des images, des vidéos ou des liens ici. </p>
+		<p>First paragraph</p>
+		<p>Second paragraph</p>
+
+        <script>
+            d3.selectAll("div")
+				.on("mouseover", function(event) {
+					d3.select(this)
+						.style("background-color", "orange");
+
+					console.log("Événement :", event);
+					console.log("Coordonnées :", d3.pointer(event, this));
+              })
+              .on("mouseout", function() {
+					d3.select(this)
+						.style("background-color", "steelblue");
+              });
+			  
+			d3.selectAll("div")
+				.on("click", function(event) {
+					  console.log("Clic détecté :", event);
+				  });
+			  
+			console.log(d3.selectAll("div"));
+        </script>
+		
+		<svg className="chart" width="420" height="120">
+			<g transform="translate(0,0)">
+				<rect width="50" height="19"></rect>
+				<text x="47" y="9.5" dy=".35em"> 5 </text>
+			</g>
+			<g transform="translate(0,20)">
+				<rect width="100" height="19"></rect>
+				<text x="97" y="9.5" dy=".35em"> 10 </text>
+			</g>
+			<g transform="translate(0,40)">
+				<rect width="120" height="19"></rect>
+				<text x="117" y="9.5" dy=".35em"> 12 </text>
+			</g>
+		</svg>
 		
 		<button onclick="alert('Bonjour !')"> Cliquez ici </button>
 		
