@@ -1,0 +1,92 @@
+[
+  {
+    "Zone": 1,
+    "NombreDronesActifs": 5,
+    "NombreDronesEnPanne": 2,
+    "NombreDronesEnRechargement": 3,
+    "DetectionIncendie": "oui",
+    "DetectionForme": "objetNonIdentifie",
+    "AuditConformite": "oui"
+  },
+  {
+    "Zone": 2,
+    "NombreDronesActifs": 3,
+    "NombreDronesEnPanne": 0,
+    "NombreDronesEnRechargement": 1,
+    "DetectionIncendie": "non",
+    "DetectionForme": "personnelNonIdentifie",
+    "AuditConformite": "non"
+  },
+  {
+    "Zone": 3,
+    "NombreDronesActifs": 7,
+    "NombreDronesEnPanne": 1,
+    "NombreDronesEnRechargement": 2,
+    "DetectionIncendie": "non",
+    "DetectionForme": "aucune",
+    "AuditConformite": "oui"
+  },
+  {
+    "Zone": 4,
+    "NombreDronesActifs": 6,
+    "NombreDronesEnPanne": 3,
+    "NombreDronesEnRechargement": 4,
+    "DetectionIncendie": "oui",
+    "DetectionForme": "objetNonIdentifie",
+    "AuditConformite": "non"
+  },
+  {
+    "Zone": 5,
+    "NombreDronesActifs": 4,
+    "NombreDronesEnPanne": 2,
+    "NombreDronesEnRechargement": 1,
+    "DetectionIncendie": "oui",
+    "DetectionForme": "aucune",
+    "AuditConformite": "oui"
+  },
+  {
+    "Zone": 6,
+    "NombreDronesActifs": 2,
+    "NombreDronesEnPanne": 1,
+    "NombreDronesEnRechargement": 3,
+    "DetectionIncendie": "non",
+    "DetectionForme": "personnelNonIdentifie",
+    "AuditConformite": "oui"
+  },
+  {
+    "Zone": 7,
+    "NombreDronesActifs": 8,
+    "NombreDronesEnPanne": 0,
+    "NombreDronesEnRechargement": 2,
+    "DetectionIncendie": "non",
+    "DetectionForme": "aucune",
+    "AuditConformite": "non"
+  },
+  {
+    "Zone": 8,
+    "NombreDronesActifs": 5,
+    "NombreDronesEnPanne": 1,
+    "NombreDronesEnRechargement": 1,
+    "DetectionIncendie": "oui",
+    "DetectionForme": "objetNonIdentifie",
+    "AuditConformite": "oui"
+  },
+  {
+    "Zone": 9,
+    "NombreDronesActifs": 6,
+    "NombreDronesEnPanne": 1,
+    "NombreDronesEnRechargement": 0,
+    "DetectionIncendie": "oui",
+    "DetectionForme": "aucune",
+    "AuditConformite": "non"
+  },
+  {
+    "Zone": 10,
+    "NombreDronesActifs": 4,
+    "NombreDronesEnPanne": 2,
+    "NombreDronesEnRechargement": 3,
+    "DetectionIncendie": "non",
+    "DetectionForme": "personnelNonIdentifie",
+    "AuditConformite": "oui"
+  }
+]

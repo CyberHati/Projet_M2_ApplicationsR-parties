@@ -1,0 +1,92 @@
+[
+  {
+    "IdentifiantProduit": 1,
+    "Zone": 101,
+    "EtatEmballage": "Correct",
+    "Responsable": "123-45-6789",
+    "Position": [48.8566, 2.3522, 35.0],
+    "Rotation": [0.0, 90.0, 180.0],
+    "Collisions": 2
+  },
+  {
+    "IdentifiantProduit": 2,
+    "Zone": 102,
+    "EtatEmballage": "Deforme",
+    "Responsable": "234-56-7890",
+    "Position": [34.0522, -118.2437, 30.0],
+    "Rotation": [45.0, 0.0, 0.0],
+    "Collisions": 1
+  },
+  {
+    "IdentifiantProduit": 3,
+    "Zone": 103,
+    "EtatEmballage": "Deforme",
+    "Responsable": "345-67-8901",
+    "Position": [40.7128, -74.0060, 10.0],
+    "Rotation": [90.0, 45.0, 270.0],
+    "Collisions": 0
+  },
+  {
+    "IdentifiantProduit": 4,
+    "Zone": 104,
+    "EtatEmballage": "Deforme",
+    "Responsable": "456-78-9012",
+    "Position": [51.5074, -0.1278, 25.0],
+    "Rotation": [180.0, 180.0, 90.0],
+    "Collisions": 3
+  },
+  {
+    "IdentifiantProduit": 5,
+    "Zone": 105,
+    "EtatEmballage": "Deforme",
+    "Responsable": "567-89-0123",
+    "Position": [48.8566, 2.3522, 40.0],
+    "Rotation": [30.0, 60.0, 120.0],
+    "Collisions": 0
+  },
+  {
+    "IdentifiantProduit": 6,
+    "Zone": 106,
+    "EtatEmballage": "Correct",
+    "Responsable": "678-90-1234",
+    "Position": [37.7749, -122.4194, 15.0],
+    "Rotation": [45.0, 45.0, 45.0],
+    "Collisions": 0
+  },
+  {
+    "IdentifiantProduit": 7,
+    "Zone": 107,
+    "EtatEmballage": "Deforme",
+    "Responsable": "789-01-2345",
+    "Position": [38.9072, -77.0369, 50.0],
+    "Rotation": [0.0, 90.0, 180.0],
+    "Collisions": 1
+  },
+  {
+    "IdentifiantProduit": 8,
+    "Zone": 108,
+    "EtatEmballage": "Correct",
+    "Responsable": "890-12-3456",
+    "Position": [39.7392, -104.9903, 20.0],
+    "Rotation": [90.0, 45.0, 270.0],
+    "Collisions": 2
+  },
+  {
+    "IdentifiantProduit": 9,
+    "Zone": 109,
+    "EtatEmballage": "Deforme",
+    "Responsable": "901-23-4567",
+    "Position": [41.8781, -87.6298, 30.0],
+    "Rotation": [30.0, 60.0, 120.0],
+    "Collisions": 1
+  },
+  {
+    "IdentifiantProduit": 10,
+    "Zone": 110,
+    "EtatEmballage": "Correct",
+    "Responsable": "012-34-5678",
+    "Position": [34.0522, -118.2437, 45.0],
+    "Rotation": [180.0, 180.0, 90.0],
+    "Collisions": 0
+  }
+]

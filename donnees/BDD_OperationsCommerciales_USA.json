@@ -1,0 +1,137 @@
+[
+  {
+    "Identifiant": 1,
+    "Type": "Vente",
+    "Responsable": "123-45-6789",
+    "MargeDegagee": 1500.50,
+    "NombreKilometresParcourus": 320,
+    "MotCleResponsable": "Promotion",
+    "MotCleClient": "Prix"
+  },
+  {
+    "Identifiant": 2,
+    "Type": "Achat",
+    "Responsable": "987-65-4321",
+    "MargeDegagee": 5000.00,
+    "NombreKilometresParcourus": 120,
+    "MotCleResponsable": "Négociation",
+    "MotCleFournisseur": "Quantité"
+  },
+  {
+    "Identifiant": 3,
+    "Type": "Vente",
+    "Responsable": "111-22-3333",
+    "MargeDegagee": 2300.75,
+    "NombreKilometresParcourus": 410,
+    "MotCleResponsable": "OffreSpeciale",
+    "MotCleClient": "Livraison"
+  },
+  {
+    "Identifiant": 4,
+    "Type": "Achat",
+    "Responsable": "222-33-4444",
+    "MargeDegagee": 750.25,
+    "NombreKilometresParcourus": 150,
+    "MotCleResponsable": "Urgence",
+    "MotCleFournisseur": "Qualité"
+  },
+  {
+    "Identifiant": 5,
+    "Type": "Vente",
+    "Responsable": "333-44-5555",
+    "MargeDegagee": 3200.60,
+    "NombreKilometresParcourus": 500,
+    "MotCleResponsable": "Renouvellement",
+    "MotCleClient": "Garantie"
+  },
+  {
+    "Identifiant": 6,
+    "Type": "Achat",
+    "Responsable": "444-55-6666",
+    "MargeDegagee": 4200.80,
+    "NombreKilometresParcourus": 200,
+    "MotCleResponsable": "Réduction",
+    "MotCleFournisseur": "Délai"
+  },
+  {
+    "Identifiant": 7,
+    "Type": "Vente",
+    "Responsable": "555-66-7777",
+    "MargeDegagee": 1800.40,
+    "NombreKilometresParcourus": 350,
+    "MotCleResponsable": "LivraisonRapide",
+    "MotCleClient": "Disponibilité"
+  },
+  {
+    "Identifiant": 8,
+    "Type": "Achat",
+    "Responsable": "666-77-8888",
+    "MargeDegagee": 2500.00,
+    "NombreKilometresParcourus": 180,
+    "MotCleResponsable": "Qualité",
+    "MotCleFournisseur": "PrixCompetitif"
+  },
+  {
+    "Identifiant": 9,
+    "Type": "Vente",
+    "Responsable": "777-88-9999",
+    "MargeDegagee": 3500.30,
+    "NombreKilometresParcourus": 450,
+    "MotCleResponsable": "Partenariat",
+    "MotCleClient": "ServiceApresVente"
+  },
+  {
+    "Identifiant": 10,
+    "Type": "Achat",
+    "Responsable": "888-99-0000",
+    "MargeDegagee": 1200.25,
+    "NombreKilometresParcourus": 100,
+    "MotCleResponsable": "Stock",
+    "MotCleFournisseur": "Dispo"
+  },
+  {
+    "Identifiant": 11,
+    "Type": "Vente",
+    "Responsable": "111-22-3333",
+    "MargeDegagee": 5000.00,
+    "NombreKilometresParcourus": 250,
+    "MotCleResponsable": "Négociation",
+    "MotCleClient": "Prix"
+  },
+  {
+    "Identifiant": 12,
+    "Type": "Achat",
+    "Responsable": "000-11-2222",
+    "MargeDegagee": 1300.40,
+    "NombreKilometresParcourus": 160,
+    "MotCleResponsable": "Approvisionnement",
+    "MotCleFournisseur": "LivraisonRapide"
+  },
+  {
+    "Identifiant": 13,
+    "Type": "Vente",
+    "Responsable": "111-22-3333",
+    "MargeDegagee": 3100.75,
+    "NombreKilometresParcourus": 370,
+    "MotCleResponsable": "Exclusivité",
+    "MotCleClient": "Fidélité"
+  },
+  {
+    "Identifiant": 14,
+    "Type": "Achat",
+    "Responsable": "222-33-4444",
+    "MargeDegagee": 1500.50,
+    "NombreKilometresParcourus": 210,
+    "MotCleResponsable": "CommandeUrgente",
+    "MotCleFournisseur": "Quantité"
+  },
+  {
+    "Identifiant": 15,
+    "Type": "Vente",
+    "Responsable": "333-44-5555",
+    "MargeDegagee": 2200.60,
+    "NombreKilometresParcourus": 400,
+    "MotCleResponsable": "ContratLongTerme",
+    "MotCleClient": "Fiabilité"
+  }
+]
