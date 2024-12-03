@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<!--<link rel="stylesheet" type="text/css" href="../CSS/Beaute.css">-->
+		<link rel="stylesheet" type="text/css" href="../CSS/Beaute.css">
 		
 		<title> Tableau de Bord </title>
 
@@ -13,8 +13,8 @@
 	
 	<body>
 	
-	<script src="d3.v7.js"></script>
-	
+	<!--<script src="d3.v7.js"></script>
+	-->
 	<script>
 	
 			var data = [
@@ -35,7 +35,7 @@
 
 	<main>
 	
-		<script>
+		<!--<script>
 		
 			var width = 500,
 				scaleFactor = 10,
@@ -65,7 +65,7 @@
 			   .attr("dy", ".35em")
 			   .text(function(d) { return d; });
 		
-		</script>
+		</script>-->
 		
 		<div style="width: 200px; height: 100px; background-color: steelblue; margin: 20px;">
 			formulaire 
@@ -75,7 +75,7 @@
 		<p>First paragraph</p>
 		<p>Second paragraph</p>
 
-        <script>
+        <!--<script>
             d3.selectAll("div")
 				.on("mouseover", function(event) {
 					d3.select(this)
@@ -95,9 +95,9 @@
 				  });
 			  
 			console.log(d3.selectAll("div"));
-        </script>
+        </script>-->
 		
-		<svg className="chart" width="420" height="120">
+		<!--<svg className="chart" width="420" height="120">
 			<g transform="translate(0,0)">
 				<rect width="50" height="19"></rect>
 				<text x="47" y="9.5" dy=".35em"> 5 </text>
@@ -110,21 +110,21 @@
 				<rect width="120" height="19"></rect>
 				<text x="117" y="9.5" dy=".35em"> 12 </text>
 			</g>
-		</svg>
+		</svg>-->
 		
 		<button id="question"> Cliquez ici </button>
 		<div id="reponse"></div>
 
 		<script>
-			document.getElementId("question").onclick = function() {
-				fetch('http://192.168.200.39:8000/AssisatnceCommerciale/A')
+			document.getElementById("question").onclick = function() {
+				fetch('http://192.168.200.39:8000/AssistanceCommerciale/A')
 					.then(reponse => reponse.json())
 					.then(data => {
 						document.getElementById("reponse").innerHTML = 'Message du derveur : ' + data.message;
 					})
 					.catch(error => {
 						console.error('Erreur :', error);
-						document.getElementById("reponse"=.innerHTML = 'Errueu de connexion au serveur.';
+						document.getElementById("reponse").innerHTML = 'Errueu de connexion au serveur.';
 					});
 			};
 		</script>
