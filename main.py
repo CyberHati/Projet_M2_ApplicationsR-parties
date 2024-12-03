@@ -1,6 +1,4 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-import os
+from fastapi import FastAPI
 import json
 
 #accéder à un fichier .json se trouvant dans le dossier /donnees
@@ -67,7 +65,7 @@ async def max_marge():
     return responsables if responsables else {"message": "No responsables found."}
 
 # Afficher les zones avec le moins d'oxyde de carbone
-@app.get("/AssisatnceCommerciale/A")
+@app.get("/AssistanceCommerciale/A")
 async def less_Carbone():
     # Vérifier s'il y a des releve sanitaires dans la liste
     if not ReleveSanitaires:
