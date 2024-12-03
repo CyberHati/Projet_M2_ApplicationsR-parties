@@ -125,6 +125,6 @@ Nous allons devoir réaliser un tableau de bord pour l'utilisateur "Olivia" qui 
 Les données sont stockées dans des fichiers .json se trouvant dans le dossier "/donnees"
 
 Pour lancer le serveur il faut lancer cette commande depuis le dossier mère :
-`uvicorn main:app --reload`
+`uvicorn main:app --host 192.168.200.39 --port 8000`
 
 
