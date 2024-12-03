@@ -1,136 +1,69 @@
 <!DOCTYPE html>
-<html lang="fr">
-	
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<link rel="stylesheet" type="text/css" href="../CSS/Beaute.css">
+		<link rel="stylesheet" href="../CSS/Beaute.css">
 		
-		<title> Tableau de Bord </title>
-
+		<title>Tableau de Bord - Olivia</title>
 	</head>
-	
+
 	<body>
-	
-	<!--<script src="d3.v7.js"></script>
-	-->
-	<script>
-	
-			var data = [
-				30,
-				25,
-				64,
-				189,
-				2,
-			];
+		<h1>Tableau de Bord - Olivia</h1>
+    
+		<div class="container">
+		
+			<!-- Commercial A -->
+			<div class="affichageData">
+				<h3>Commercial: Article ayant subi le moins de collisions</h3>
+				<div id="commercial-a" class="data">Chargement...</div>
+			</div>
+
+			<!-- Qualité A -->
+			<div class="affichageData">
+				<h3>Qualité: Nombre d’articles ayant un emballage correct</h3>
+				<div id="qualite-a" class="data">Chargement...</div>
+			</div>
+
+			<section id="R&D">
 			
-	</script>
-	
-	<header>
-	
-		<h1> Bienvenue sur votre tableau de bord </h1>
-		
-	</header>
+				<!-- Recherche & Développement A -->
+				<div class="affichageData">
+					<h3>Recherche & Développement: Nombre d’articles ayant un emballage déformé sans collision</h3>
+					<div id="recherche-a" class="data">Chargement...</div>
+				</div>
+				
+				<!-- Recherche & Développement B -->
+				<div class="affichageData">
+					<h3>Industriel: Machine ayant la meilleure cadence</h3>
+					<div id="recherche-b" class="data">Chargement...</div>
+				</div>
+				
+			</section>
+			
+			<!-- Ressources Humaines A -->
+			<div class="affichageData">
+				<h3>Ressources humaines: Formation avec le pourcentage de motivation le plus élevé</h3>
+				<div id="ressources-a" class="data">Chargement...</div>
+			</div>
 
-	<main>
-	
-		<!--<script>
+			<!-- Maintenance B -->
+			<div class="affichageData">
+				<h3>Maintenance: Nombre de zones ayant un incendie en cours</h3>
+				<div id="maintenance-b" class="data">Chargement...</div>
+			</div>
+
+			<!-- Assistance Commerciale B -->
+			<div class="affichageData">
+				<h3>Assistance Commerciale: Nombre de responsables en vente</h3>
+				<div id="assistance-b" class="data">Chargement...</div>
+			</div>
 		
-			var width = 500,
-				scaleFactor = 10,
-				barHeight = 20;
-				
-			var graph = d3.select("body")
-              .append("svg")
-              .attr("width", width)
-              .attr("height", barHeight * data.length);
-			  
-			var bar = graph.selectAll("g")
-				.data(data)
-				.enter().append("g")
-				.attr("transform", function(d, i) {
-					return "translate(0," + i*barHeight + ")";
-				});
-				
-			bar.append("rect")
-				.attr("width", function(d) {
-					return d * scaleFactor;
-				})
-				.attr("height", barHeight - 1);
-				
-			bar.append("text")
-			   .attr("x", function(d) { return (d*scaleFactor); })
-			   .attr("y", barHeight / 2)
-			   .attr("dy", ".35em")
-			   .text(function(d) { return d; });
-		
-		</script>-->
-		
-		<div style="width: 200px; height: 100px; background-color: steelblue; margin: 20px;">
-			formulaire 
 		</div>
-		
-		<p> Ce paragraphe est généré par du code HTML et peut être utilisé pour afficher des informations quelconques. Vous pouvez ajouter plus de texte, des images, des vidéos ou des liens ici. </p>
-		<p>First paragraph</p>
-		<p>Second paragraph</p>
 
-        <!--<script>
-            d3.selectAll("div")
-				.on("mouseover", function(event) {
-					d3.select(this)
-						.style("background-color", "orange");
-
-					console.log("Événement :", event);
-					console.log("Coordonnées :", d3.pointer(event, this));
-              })
-              .on("mouseout", function() {
-					d3.select(this)
-						.style("background-color", "steelblue");
-              });
-			  
-			d3.selectAll("div")
-				.on("click", function(event) {
-					  console.log("Clic détecté :", event);
-				  });
-			  
-			console.log(d3.selectAll("div"));
-        </script>-->
+		<script src="../Scripts/Action.js"></script>
+		<script src="../Scripts/AffichageData.js"></script>
 		
-		<!--<svg className="chart" width="420" height="120">
-			<g transform="translate(0,0)">
-				<rect width="50" height="19"></rect>
-				<text x="47" y="9.5" dy=".35em"> 5 </text>
-			</g>
-			<g transform="translate(0,20)">
-				<rect width="100" height="19"></rect>
-				<text x="97" y="9.5" dy=".35em"> 10 </text>
-			</g>
-			<g transform="translate(0,40)">
-				<rect width="120" height="19"></rect>
-				<text x="117" y="9.5" dy=".35em"> 12 </text>
-			</g>
-		</svg>-->
-		
-		<button id="question"> Cliquez ici </button>
-		<div id="reponse"></div>
-
-		<script>
-			document.getElementById("question").onclick = function() {
-				fetch('http://192.168.200.39:8000/AssistanceCommerciale/A')
-					.then(reponse => reponse.json())
-					.then(data => {
-						document.getElementById("reponse").innerHTML = 'Message du derveur : ' + data.message;
-					})
-					.catch(error => {
-						console.error('Erreur :', error);
-						document.getElementById("reponse").innerHTML = 'Errueu de connexion au serveur.';
-					});
-			};
-		</script>
-		
-	</main>
-
 	</body>
-	
 </html>
