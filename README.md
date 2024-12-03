@@ -1,6 +1,6 @@
 # **_Projet_M2_ApplicationsReparties_**
 ## **Contexte**
-### **Serveurs de données**
+### **Serveur de données**
 Nous devons créer un serveur de données permettant d'accéder aux données suivantes :
 #### Personnel
 - **Identifiant :** Numéro de sécurité sociale
