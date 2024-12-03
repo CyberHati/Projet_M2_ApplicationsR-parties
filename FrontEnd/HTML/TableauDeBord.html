@@ -112,7 +112,22 @@
 			</g>
 		</svg>
 		
-		<button onclick="alert('Bonjour !')"> Cliquez ici </button>
+		<button id="question"> Cliquez ici </button>
+		<div id="reponse"></div>
+
+		<script>
+			document.getElementId("question").onclick = function() {
+				fetch('http://192.168.200.39:8000/AssisatnceCommerciale/A')
+					.then(reponse => reponse.json())
+					.then(data => {
+						document.getElementById("reponse").innerHTML = 'Message du derveur : ' + data.message;
+					})
+					.catch(error => {
+						console.error('Erreur :', error);
+						document.getElementById("reponse"=.innerHTML = 'Errueu de connexion au serveur.';
+					});
+			};
+		</script>
 		
 	</main>
 
