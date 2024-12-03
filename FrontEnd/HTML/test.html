@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Olivia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 300px;
+            padding: 20px;
+            margin: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #333;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .loading {
+            color: #888;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .data {
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tableau de Bord - Olivia</h1>
+    
+    <div class="container">
+        <!-- Commercial A -->
+        <div class="card">
+            <h3>Commercial: Article ayant subi le moins de collisions</h3>
+            <div id="commercial-a" class="data">Chargement...</div>
+        </div>
+
+        <!-- Industriel B -->
+        <div class="card">
+            <h3>Industriel: Machine ayant la meilleure cadence</h3>
+            <div id="industriel-b" class="data">Chargement...</div>
+        </div>
+
+        <!-- Qualité A -->
+        <div class="card">
+            <h3>Qualité: Nombre d’articles ayant un emballage correct</h3>
+            <div id="qualite-a" class="data">Chargement...</div>
+        </div>
+
+        <!-- Recherche & Développement A -->
+        <div class="card">
+            <h3>Recherche & Développement: Nombre d’articles ayant un emballage déformé sans collision</h3>
+            <div id="recherche-a" class="data">Chargement...</div>
+        </div>
+
+        <!-- Ressources Humaines A -->
+        <div class="card">
+            <h3>Ressources humaines: Formation avec le pourcentage de motivation le plus élevé</h3>
+            <div id="ressources-a" class="data">Chargement...</div>
+        </div>
+
+        <!-- Maintenance B -->
+        <div class="card">
+            <h3>Maintenance: Nombre de zones ayant un incendie en cours</h3>
+            <div id="maintenance-b" class="data">Chargement...</div>
+        </div>
+
+        <!-- Assistance Commerciale B -->
+        <div class="card">
+            <h3>Assistance Commerciale: Nombre de responsables en vente</h3>
+            <div id="assistance-b" class="data">Chargement...</div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchData(url, elementId) {
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                // Si la donnée est un tableau, on l'affiche sous forme de liste
+                if (Array.isArray(data) && data.length > 0) {
+                    document.getElementById(elementId).innerHTML = JSON.stringify(data, null, 2);
+                } else if (data.count !== undefined) {
+                    // Si la donnée contient un champ "count", on l'affiche comme un nombre
+                    document.getElementById(elementId).innerHTML = `Nombre: ${data.count}`;
+                } else {
+                    // Par défaut, on affiche le contenu JSON
+                    document.getElementById(elementId).innerHTML = JSON.stringify(data, null, 2);
+                }
+            } catch (error) {
+                document.getElementById(elementId).innerHTML = `Erreur lors de la récupération des données: ${error.message}`;
+            }
+        }
+
+        window.onload = function() {
+            // Charger les différentes sections avec les bonnes URL de ton API
+            fetchData("http://192.168.200.39:8000/Commercial/A", "commercial-a");
+            fetchData("http://192.168.200.39:8000/Industriel/B", "industriel-b");
+            fetchData("http://192.168.200.39:8000/Qualite/A", "qualite-a");
+            fetchData("http://192.168.200.39:8000/RechercheEtDevloppement/A", "recherche-a");
+            fetchData("http://192.168.200.39:8000/RessourcesHumaines/A", "ressources-a");
+            fetchData("http://192.168.200.39:8000/Maintenance/B", "maintenance-b");
+            fetchData("http://192.168.200.39:8000/AssistanceCommerciale/B", "assistance-b");
+        }
+    </script>
+</body>
+</html>
