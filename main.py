@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import json
+import httpx
 
 #accéder à un fichier .json se trouvant dans le dossier /donnees
 with open("donnees/BDD_Articles_USA.json") as f:
@@ -19,10 +20,43 @@ with open("donnees/BDD_SurveillanceZone_USA.json") as f:
 
 app = FastAPI()
 
+#déclare et configure CORS
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # permet à tous les domaines d'accéder à l'API
+    allow_credentials=True,
+    allow_methods=["*"], # permet toutes les méthodes (GET, POST, PUT, DELETE, etc.)
+    allow_headers=["*"], # permet tous les headers
+)
 
 @app.get("/")
 async def root():
     return {"message": "привет"}
+
+
+# Endpoints pour accéder aux données
+
+@app.get("/articles", response_model=list)
+async def get_articles():
+    return Articles
+
+@app.get("/operations", response_model=list)
+async def get_operations():
+    return OperationsCommerciales
+
+@app.get("/personnels", response_model=list)
+async def get_personnels():
+    return Personnels
+
+@app.get("/releves", response_model=list)
+async def get_releves():
+    return ReleveSanitaires
+
+@app.get("/surveillance", response_model=list)
+async def get_surveillance():
+    return SurveillanceZone
 
 
 #Afficher les articles avec le moins de collisions
@@ -81,7 +115,7 @@ async def less_Carbone():
 
 
 # Afficher le responsable de l'opération commercial ayant le type vente
-@app.get("/AssisatnceCommerciale/B")
+@app.get("/AssistanceCommerciale/B")
 async def Resp_vente():
     # Vérifier s'il y a des operations commerciales dans la liste
     if not OperationsCommerciales:
@@ -118,6 +152,23 @@ async def deform_with_no_collision():
     return filtered_articles if filtered_articles else {"message": "No articles found."}
 
 
+@app.get("/RechercheEtDevloppement/B")
+async def recherche_developpement_b():
+    ngrok_url = "https://d98f-194-199-84-88.ngrok-free.app"  # Remplacez par votre adresse ngrok
+
+    # Effectuer une requête GET vers le serveur ngrok
+    async with httpx.AsyncClient() as client:
+        try:
+            response = await client.get(ngrok_url + "/api/machines")  # Remplacez /votre_endpoint par le bon endpoint
+            response.raise_for_status()  # Lève une exception pour les réponses d'erreur
+            data = response.json()  # Récupère les données JSON
+            
+            return data
+        except httpx.RequestError as exc:
+            return {"error": f"Une erreur s'est produite lors de la connexion : {exc}"}
+        except httpx.HTTPStatusError as exc:
+            return {"error": f"Erreur HTTP : {exc.response.status_code}"}
+
 
 
 
@@ -151,8 +202,19 @@ async def deform_with_no_collision():
 #             personnes.remove(x)
 #             return f"La liste a maintenant {len(personnes)} objet(s) de type Personne"
 
+
+
         
     
 
-    
+ #afficher dechets pourcentage
+@app.get("/audit_conformite/percentage")
+def audit_conformite_percentage():
+    total_releves = len(SurveillanceZone)
+    releves_conformes = sum(1 for item in SurveillanceZone if item['AuditConformite'] == "oui")
 
+    if total_releves == 0:
+        return {"percentage": 0}
+
+    percentage = (releves_conformes / total_releves) * 100
+    return {"percentage": percentage}
