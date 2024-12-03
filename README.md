@@ -97,7 +97,7 @@ La liste suivante indique le type de données que fournira ce serveur applicatif
 #### Recherche & développement
 - **A.** Nombre d’articles ayant un emballage déformé sans subir aucune collision
 - **B.** Machine ayant la plus faible cadence
-### **Niveau Client**
+### **Interface utilisateur**
 Nous allons devoir réaliser un tableau de bord pour l'utilisateur "Olivia" qui aura accès à :
 
 #### Commercial
