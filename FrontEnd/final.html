@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface FastAPI</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interface de Olivia</h1>
+
+        <div class="section">
+            <h2>Articles</h2>
+            <div id="articles" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Opérations Commerciales</h2>
+            <div id="operations" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Personnels</h2>
+            <div id="personnels" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Relevés Sanitaires</h2>
+            <div id="releves" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Surveillance des Zones</h2>
+            <div id="surveillance" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Articles avec le moins de collisions</h2>
+            <div id="less_collisions" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Responsable de l'opération commerciale avec la marge la plus importante</h2>
+            <div id="max_marge" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Zones avec le moins d'oxyde de carbone</h2>
+            <div id="less_carbone" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Responsable de l'opération commerciale de type vente</h2>
+            <div id="resp_vente" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Articles déformés avec le moins de collisions</h2>
+            <div id="deform_with_no_collision" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Pourcentage de conformité des audits</h2>
+            <div id="audit_conformite_percentage" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchData(endpoint, callback) {
+            const response = await fetch(`http://localhost:8000${endpoint}`);
+            const data = await response.json();
+            callback(data);
+        }
+
+        function displayArticles(data) {
+            const container = document.getElementById('articles');
+            if (data.length === 0) {
+                container.innerText = "Aucun article trouvé.";
+                return;
+            }
+
+            let table = '<table><tr><th>Identifiant Produit</th><th>Zone</th><th>État Emballage</th><th>Responsable</th><th>Position</th><th>Rotation</th><th>Collisions</th></tr>';
+            data.forEach(article => {
+                table += `<tr>
+                    <td>${article.IdentifiantProduit}</td>
+                    <td>${article.Zone}</td>
+                    <td>${article.EtatEmballage}</td>
+                    <td>${article.Responsable}</td>
+                    <td>${article.Position.join(', ')}</td>
+                    <td>${article.Rotation.join(', ')}</td>
+                    <td>${article.Collisions}</td>
+                </tr>`;
+            });
+            table += '</table>';
+            container.innerHTML = table;
+        }
+
+        function displayOperations(data) {
+            const container = document.getElementById('operations');
+            if (data.length === 0) {
+                container.innerText = "Aucune opération commerciale trouvée.";
+                return;
+            }
+
+            let table = '<table><tr><th>Identifiant Opération</th><th>Type</th><th>Marge Dégagée</th><th>Responsable</th></tr>';
+            data.forEach(operation => {
+                table += `<tr>
+                    <td>${operation.IdentifiantOperation}</td>
+                    <td>${operation.Type}</td>
+                    <td>${operation.MargeDegagee}</td>
+                    <td>${operation.Responsable}</td>
+                </tr>`;
+            });
+            table += '</table>';
+            container.innerHTML = table;
+        }
+
+        function displayPersonnels(data) {
+            const container = document.getElementById('personnels');
+            if (data.length === 0) {
+                container.innerText = "Aucun personnel trouvé.";
+                return;
+            }
+
+            let table = '<table><tr><th>Identifiant</th><th>Nom</th><th>Prénom</th><th>Poste</th></tr>';
+            data.forEach(personnel => {
+                table += `<tr>
+                    <td>${personnel.Identifiant}</td>
+                    <td>${personnel.Nom}</td>
+                    <td>${personnel.Prenom}</td>
+                    <td>${personnel.Poste}</td>
+                </tr>`;
+            });
+            table += '</table>';
+            container.innerHTML = table;
+        }
+
+        function displayReleves(data) {
+            const container = document.getElementById('releves');
+            if (data.length === 0) {
+                container.innerText = "Aucun relevé sanitaire trouvé.";
+                return;
+            }
+
+            let table = '<table><tr><th>Identifiant Relevé</th><th>Zone</th><th>Oxyde de Carbone</th><th>Responsable</th></tr>';
+            data.forEach(releve => {
+                table += `<tr>
+                    <td>${releve.IdentifiantReleve}</td>
+                    <td>${releve.Zone}</td>
+                    <td>${releve.OxydeCarbone}</td>
+                    <td>${releve.Responsable}</td>
+                </tr>`;
+            });
+            table += '</table>';
+            container.innerHTML = table;
+        }
+
+        function displaySurveillance(data) {
+            const container = document.getElementById('surveillance');
+            if (data.length === 0) {
+                container.innerText = "Aucune surveillance de zone trouvée.";
+                return;
+            }
+
+            let table = '<table><tr><th>Identifiant Zone</th><th>Nom Zone</th><th>Audit Conformité</th><th>Responsable</th></tr>';
+            data.forEach(zone => {
+                table += `<tr>
+                    <td>${zone.IdentifiantZone}</td>
+                    <td>${zone.NomZone}</td>
+                    <td>${zone.AuditConformite}</td>
+                    <td>${zone.Responsable}</td>
+                </tr>`;
+            });
+            table += '</table>';
+            container.innerHTML = table;
+        }
+
+        function displayPercentage(data) {
+            const container = document.getElementById('audit_conformite_percentage');
+            container.innerText = `Pourcentage de conformité des audits : ${data.percentage.toFixed(2)}%`;
+        }
+
+        // Appeler les fonctions de manière périodique
+        setInterval(() => {
+            fetchData('/articles', displayArticles);
+            fetchData('/operations', displayOperations);
+            fetchData('/personnels', displayPersonnels);
+            fetchData('/releves', displayReleves);
+            fetchData('/surveillance', displaySurveillance);
+            fetchData('/Commercial/A', displayArticles);
+            fetchData('/Commercial/B', displayPersonnels);
+            fetchData('/AssistanceCommerciale/A', displayReleves);
+            fetchData('/AssistanceCommerciale/B', displayPersonnels);
+            fetchData('/RechercheEtDevloppement/A', displayArticles);
+            fetchData('/audit_conformite/percentage', displayPercentage);
+        }, 5000); // Intervalle de 5 secondes
+    </script>
+</body>
+</html>
